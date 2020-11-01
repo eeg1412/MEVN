@@ -1,2 +1,2 @@
-# MEVN
-自用的MEVN
+# MERN
+自用MERN
