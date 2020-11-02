@@ -3,5 +3,8 @@ export default function (api) {
     register (data) {
       return api.post('/register', data)
     },
+    login (data) {
+      return api.post('/login', data)
+    },
   }
 }

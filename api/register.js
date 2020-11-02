@@ -1,5 +1,6 @@
 const userUtils = require('../mongodb/utils/users');
 const chalk = require('chalk');
+const md5 = require('md5');
 
 module.exports = async function (req, res, next) {
     const password = req.body.password;
@@ -7,7 +8,7 @@ module.exports = async function (req, res, next) {
     if (password && account) {
         const userInfo = {
             account: account,
-            password: password,
+            password: md5(password),
         }
         const hasUser = await userUtils.findOne({ account: account });
         if (hasUser) {
