@@ -6,7 +6,8 @@
     <div>密码：<input type="password"
              v-model="password"></div>
     <div><button type="button"
-              @click="login">登录</button>
+              @click="login"
+              class="mr5">登录</button>
       <router-link to="/">返回</router-link>
     </div>
   </div>
@@ -36,7 +37,7 @@ export default {
         alert(res.data.msg);
         if (res.data.code === 1) {
           sessionStorage.setItem("token", res.data.token);
-          this.$router.push({ name: 'Home' });
+          this.$router.push({ name: 'chat' });
         }
       });
     }

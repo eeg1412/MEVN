@@ -5,7 +5,8 @@
     <div>密码：<input type="password"
              v-model="password"></div>
     <div><button type="button"
-              @click="register">注册</button>
+              @click="register"
+              class="mr5">注册</button>
       <router-link to="/">返回</router-link>
     </div>
   </div>
@@ -31,7 +32,7 @@ export default {
       authApi.register(params).then(res => {
         alert(res.data.msg);
         if (res.data.code === 1) {
-          this.$router.push({ name: 'Home' });
+          this.$router.push({ name: 'home' });
         }
       });
     }
