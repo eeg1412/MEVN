@@ -1,15 +1,12 @@
-db:
-    image: mongo
-    ports:
-      - 27017
-  web:
+web:
     build: .
-    command: npm start
-    volumes:
-      - .:/mevn
-    ports:
-      - 3000:3000
     links:
-      - db
-    environment:
-      PORT: 3000
+     - db
+    ports:
+     - "80:8000"
+    volumes:
+     - .:/app
+  db:
+    image: mongo:latest
+    ports:
+     - "27017:27017"
