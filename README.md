@@ -1,5 +1,7 @@
-# MERN
-自用MERN
+# MEVN
+自用MEVN
+
+Mongodb+Express+Vue3+NodeJS
 
 使用前请创建.env文件
 
